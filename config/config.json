@@ -1,0 +1,28 @@
+{
+    "rdma":{
+        "nodes": ["10.30.2.1", "10.30.2.2", "10.30.2.3","10.30.2.4","10.30.2.5","10.30.2.6","10.30.2.7", "10.30.2.8","10.30.2.9","10.30.2.10","10.30.2.11", "10.30.2.12", "10.30.2.13","10.30.2.14","10.30.2.15","10.30.2.16","10.30.2.17", "10.30.2.18","10.30.2.19","10.30.2.20"],
+        "port": 8080,
+        "available_nodes": 10,
+        "region_size_mb": 8,
+        "chunk_size_byte": 64,
+        "shared_ratio": 0.2
+    },
+    "lock": {
+        "local_budget": 5,
+        "remote_budget": 1
+    },
+    "benchmark": {
+        "locks_per_node": 1,
+        "distribution":"selective",
+        "lock_hosts": 1,
+        "threads_per_node": 12,
+        "sample_number": 100000,
+        "local_percentage": 100,
+        "local_critical_section_size": 300,
+        "remote_critical_section_size": 15000,
+        "warmup": 5,
+        "duration": 10,
+        "cooldown": 5,
+        "sampling_interval": 1
+    }
+}
